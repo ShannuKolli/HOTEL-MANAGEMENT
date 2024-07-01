@@ -42,9 +42,9 @@ void time() {
 	int i=0;
 	long long j;
 	cout<<"	\n\n\n	Takes a few minutes\n Connecting to Server\n 	syncing data";
-	while(i<10)	{
-		for (j=5;j>4;j++) {
-			if (j==99999) {
+	while(i<5)	{
+		for (j=0;;j++) {
+			if (j==2000) {
 				cout<<".";
 				break;
 			}
