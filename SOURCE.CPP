@@ -244,7 +244,7 @@ void hotel::modify(int r) {
 			gets(phone);
 			cout<<" Days: ";
 			cin>>days;
-			fare=days*900;
+			fare=days*5000;
 			file.seekg(pos);
 			file.write((char*)this,sizeof(hotel));
 			cout<<"\n Record is modified....!!";
