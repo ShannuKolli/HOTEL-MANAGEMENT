@@ -5,8 +5,9 @@
 #include<string.h>
 #include<stdlib.h>
 #include<process.h>
-#include<dos.h>
+#include<direct.h>
 #include <conio.h> 
+using namespace std;
 //SHANNUKOLLI
 void clrscr() {
 #ifdef _WIN32
