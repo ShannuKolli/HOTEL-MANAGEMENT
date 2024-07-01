@@ -1,12 +1,11 @@
-
 #include<fstream>
 #include<iostream>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<conio.h>
 #include<process.h>
 #include<direct.h>
-#include <conio.h> 
 using namespace std;
 //SHANNUKOLLI
 void clrscr() {
@@ -17,29 +16,25 @@ void clrscr() {
 #endif
 }
 void intro() {
-	cout<<"\n\n\t            ";
-	cout<<"     C++ Project On Hotel Management System";
-	cout<<"\n\n\t\t\t\t    ";
-	cout<<"\n������������������������������������������";
-	cout<<"��������������������������������������";
-	cout<<"||\t\t\t\t\t\t\t\t\t      ||";
-	cout<<"||\t\t\t\t\t\t\t\t\t      ||";
-	cout<<"||\t\t\t\tShannu KOLLI\t\t\t      ||";
-	cout<<"||\t\t\t\t\t\t\t\t\t      ||";
-	cout<<"||\t\t\t\t\t  \t\t\t\t      ||";
-	cout<<"������������������������������������������";
-	cout<<"��������������������������������������";
+	cout<<"\t\t\t\t\t\t\t\t\tC++ Project On Hotel Management System";
+	cout<<endl;
+	cout<<"\n**";
+	cout<<"";
+	cout<<endl;
+	cout<<"\t\t\t\t\t\t\t\t\t\tShannu KOLLI"<<endl;
+	cout<<"\t\t\t\t\t\t\t**";
+	cout<<"";
 }
 
 void head(){
 	clrscr();
-	cout<<"������������������������������������������";
-	cout<<"��������������������������������������";
+	cout<<"";
+	cout<<"";
 	cout<<"?t\t\t\t\t\t\t\t\t       ?";
 	cout<<"?t\t\t\t  Kolli ***** Hotel\t\t\t       ?";
 	cout<<"?t\t\t\t\t\t\t\t\t       ?";
-	cout<<"������������������������������������������";
-	cout<<"��������������������������������������";
+	cout<<"";
+	cout<<"";
 }
 
 
@@ -67,14 +62,14 @@ class hotel {
 			int days;
 			float fare;
 	public:
-			void main_menu();		
-			void add();	
-			void display(); 		
-			void rooms();			
-			void edit();			
-			int check(int);	    
+			void main_menu();
+			void add();
+			void display();
+			void rooms();
+			void edit();
+			int check(int);
 			void modify(int);
-			void delete_rec(int); 
+			void delete_rec(int);
 };
 
 void hotel::main_menu() {
@@ -82,9 +77,9 @@ void hotel::main_menu() {
 	while(choice!=5) {
 		clrscr();
 		head();
-		cout<<"\n\t\t\t\t*************";
+		cout<<"\n\t\t\t\t*";
 		cout<<"\n\t\t\t\t* Greetings *";
-		cout<<"\n\t\t\t\t*************";
+		cout<<"\n\t\t\t\t*";
 		cout<<"\n\n\n\t\t\t1.Booking A Room";
 		cout<<"\n\t\t\t2.Your Record";
 		cout<<"\n\t\t\t3.Rooms Allotted";
@@ -152,7 +147,7 @@ void hotel::rooms() {
 		cout<<"\n Room no: "<<room_no<<"\n Name: "<<name;
 		cout<<"\n Address: "<<address<<"\n Phone: "<<phone;
 		cout<<"\n Days: "<<days<<"\n Total: "<<fare;
-		cout<<"\n**********************************";
+		cout<<"\n**";
 	}
 	cout<<"\n\n\n\t\t\tPress any key to continue.....!!";
 	getch();
@@ -200,14 +195,14 @@ void hotel::add() {
 	else {
 		room_no=r;
 		cout<<" Name(Limit 30 characters): ";
-		gets(name);
+		cin>>name;
 		cout<<" Address: ";
-		gets(address);
+		cin>>address;
 		cout<<" Phone No: ";
-		gets(phone);
+		cin>>phone;
 		cout<<" No of Days to Checkout: ";
 		cin>>days;
-		fare=days*5000;						
+		fare=days*5000;
 		fout.write((char*)this,sizeof(hotel));
 		cout<<"\n Voila, Room is booked...!!!";
 	}
@@ -244,11 +239,11 @@ void hotel::modify(int r) {
 			cout<<"\n Enter New Details";
 			cout<<"\n -----------------";
 			cout<<"\n Name: ";
-			gets(name);
+			cin>>name;
 			cout<<" Address: ";
-			gets(address);
+			cin>>address;
 			cout<<" Phone no: ";
-			gets(phone);
+			cin>>phone;
 			cout<<" Days: ";
 			cin>>days;
 			fare=days*5000;
@@ -303,8 +298,6 @@ void hotel::delete_rec(int r) {
 
 
 int main() {
-	textbackground(RED);
-	textcolor(0);
 	hotel h;
 	clrscr();
 	cout<<"\n\n\n";
@@ -323,7 +316,7 @@ int main() {
 	cout<<"\n\n\t";
 	time();
 	cout<<"\t";
-	if(strcmp(id,"admin")==0&&strcmp(pass,"******")==0)
+	if(strcmp(id,"admin")==0&&strcmp(pass,"")==0)
 		cout<<"\n\n\t\t\t  !!!Login Successfull!!!";
 	else {
 		cout<<"\n\n\t\t\t!!!WRONG CREDENTIALS!!!";
@@ -333,6 +326,6 @@ int main() {
 	clrscr();
 	h.main_menu();
 	getch();
-	
+
 	return 0;
-} 
+}
