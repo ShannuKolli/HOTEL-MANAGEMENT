@@ -16,12 +16,12 @@ void clrscr() {
 #endif
 }
 void intro() {
-	cout<<"\t\t\t\t\t\t\t\t\tC++ Project On Hotel Management System";
+	cout<<"\t\t\t\t\t\t\t\t\t C++ Project On Hotel Management System";
 	cout<<endl;
 	cout<<"\n**";
 	cout<<"";
 	cout<<endl;
-	cout<<"\t\t\t\t\t\t\t\t\t\tShannu KOLLI"<<endl;
+	cout<<"\t\t\t\t\t\t\t\t\t\t Shannu KOLLI"<<endl;
 	cout<<"\t\t\t\t\t\t\t**";
 	cout<<"";
 }
@@ -30,9 +30,9 @@ void head(){
 	clrscr();
 	cout<<"";
 	cout<<"";
-	cout<<"?t\t\t\t\t\t\t\t\t       ?";
-	cout<<"?t\t\t\t  Kolli ***** Hotel\t\t\t       ?";
-	cout<<"?t\t\t\t\t\t\t\t\t       ?";
+	cout<<"t\t\t\t\t\t\t\t\t       ?";
+	cout<<"t\t\t\t  Kolli ***** Hotel\t\t\t       ";
+	cout<<"t\t\t\t\t\t\t\t\t       ";
 	cout<<"";
 	cout<<"";
 }
@@ -44,7 +44,7 @@ void time() {
 	cout<<"	\n\n\n	Takes a few minutes\n Connecting to Server\n 	syncing data";
 	while(i<5)	{
 		for (j=0;;j++) {
-			if (j==2000) {
+			if (j==200) {
 				cout<<".";
 				break;
 			}
@@ -309,14 +309,14 @@ int main() {
 	clrscr();
 	head();
 	char id[5],pass[7];
-	cout<<"\n\n\t\t\t\tusername => ";
+	cout<<"\n\n\t\t\t\tusername(admin) => ";
 	cin>>id;
-	cout<<"\n\t\t\t\tpassword => ";
+	cout<<"\n\t\t\t\tpassword(pass) => ";
 	cin>>pass;
 	cout<<"\n\n\t";
 	time();
 	cout<<"\t";
-	if(strcmp(id,"admin")==0&&strcmp(pass,"")==0)
+	if(strcmp(id,"admin")==0&&strcmp(pass,"pass")==0)
 		cout<<"\n\n\t\t\t  !!!Login Successfull!!!";
 	else {
 		cout<<"\n\n\t\t\t!!!WRONG CREDENTIALS!!!";
