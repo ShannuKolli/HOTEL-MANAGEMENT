@@ -6,6 +6,7 @@
 #include<stdlib.h>
 #include<process.h>
 #include<dos.h>
+#include <conio.h> 
 //SHANNUKOLLI
 void clrscr() {
 #ifdef _WIN32
