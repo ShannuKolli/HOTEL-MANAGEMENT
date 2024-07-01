@@ -1,14 +1,19 @@
 
-#include<fstream.h>
-#include<iostream.h>
-#include<conio.h>
+#include<fstream>
+#include<iostream>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include<process.h>
 #include<dos.h>
 //SHANNUKOLLI
-
+void clrscr() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
 void intro() {
 	cout<<"\n\n\t            ";
 	cout<<"     C++ Project On Hotel Management System";
